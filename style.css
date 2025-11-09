@@ -1,0 +1,167 @@
+
+body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem;
+}
+
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+input {
+  width: 260px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+
+#movieResult {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.movie-card {
+  background-color: #1e293b;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.6s ease forwards;
+}
+
+
+.movie-card img {
+  width: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.movie-info h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.6rem;
+  color: #f8fafc;
+}
+
+.movie-info p {
+  margin: 6px 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #cbd5e1;
+}
+
+
+.links {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.links a {
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.links a.youtube {
+  background-color: #ef4444;
+  color: white;
+}
+
+.links a.imdb {
+  background-color: #facc15;
+  color: black;
+}
+
+.links a:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 700px) {
+  .movie-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .movie-card img {
+    width: 220px;
+  }
+
+  .movie-info {
+    align-items: center;
+  }
+
+  .links {
+    justify-content: center;
+  }
+}
